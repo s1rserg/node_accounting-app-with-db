@@ -55,7 +55,7 @@ const add = async (req, res) => {
     return res.sendStatus(400);
   }
 
-  if (!userRepository.getById(userId)) {
+  if (!(await userRepository.getById(userId))) {
     return res.sendStatus(400);
   }
 

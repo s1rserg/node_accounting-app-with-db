@@ -29,7 +29,7 @@ const sequelize = new Sequelize({
   password: POSTGRES_PASSWORD || '123',
   dialectOptions: {
     ssl: {
-      require: true,
+      require: false,
       rejectUnauthorized: false,
     },
   },
